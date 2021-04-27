@@ -102,9 +102,10 @@ public class Topic_02_Xpath_Css_Part1 {
 		driver.get("https://demo.nopcommerce.com/register?returnUrl=%2F");
 		
 		driver.findElement(By.xpath("//input[@id='FirstName']")).sendKeys("Automation Thong Vip pro");
+		sleepInSecond(3);
 		
-		
-		//driver.findElement(By.xpath("//input[contains(@class,'small-search-box-form')]")).sendKeys("Macbook");
+		driver.findElement(By.xpath("//input[contains(@class,'search-box-text')]")).sendKeys("Macbook");
+		sleepInSecond(3);
 		
 		driver.findElement(By.xpath("//input[@name='Email']")).sendKeys("Thongvippro@gmail.com");
 		
