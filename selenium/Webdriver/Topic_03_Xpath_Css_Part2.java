@@ -51,6 +51,7 @@ public class Topic_03_Xpath_Css_Part2 {
 		
 		driver.findElement(By.id("send2")).click();
 		
+		
 		Assert.assertEquals(driver.findElement(By.xpath("//div[@id='advice-validate-email-email']")).getText(), "Please enter a valid email address. For example johndoe@domain.com.");
 		
 	}
@@ -67,13 +68,25 @@ public class Topic_03_Xpath_Css_Part2 {
 		
 		driver.findElement(By.id("send2")).click();
 		
-		
-		Assert.assertEquals(driver.findElement(By.xpath("//div[@id='advice-validate-email-email']")).getText(), "Please enter a valid email address. For example johndoe@domain.com.");
+		//Assert.assertEquals(driver.findElement(By.id("advice-validate-password-pass")).getText(), "Please enter 6 or more characters without leading or trailing spaces.");
+		Assert.assertEquals(driver.findElement(By.xpath("//div[@id='advice-validate-password-pass']")).getText(), "Please enter 6 or more characters without leading or trailing spaces.");
 		
 		
 	}
 	@Test
 	public void TC_04_Login_Incorrect_Password() {
+		//Open home page
+		driver.get("http://live.demoguru99.com/index.php/");
+		//Open my account
+		driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
+		
+		driver.findElement(By.id("email")).sendKeys("neverquit@dds.com");
+		driver.findElement(By.id("pass")).sendKeys("1232231231");
+		
+		driver.findElement(By.id("send2")).click();
+		
+		
+		Assert.assertEquals(driver.findElement(By.xpath("//li[@class='error-msg']//span")).getText(), "Invalid login or password.");
 		
 		
 	}
