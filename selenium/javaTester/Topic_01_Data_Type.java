@@ -63,5 +63,6 @@ public class Topic_01_Data_Type {
 	RemoteWebDriver remoteDriver;
 	//kiểu collection
 	//Collection
+	//(List) ArrayList/ Linkedlist /Set/ Map
 
 }
