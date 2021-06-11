@@ -132,7 +132,7 @@ public class Topic_08_Custom_Dropdown_Part1 {
 		
 	}
 	
-	//@Test
+	@Test
 	public void TC_05_Valor_Editable() {
 		driver.get("https://valor-software.com/ng2-select/");
 		enterAndSelectItemInCustomDropdown("//tab[@heading='Single']//i[@class='caret pull-right']","//tab[@heading='Single']//input","//a[@class='dropdown-item']/div","Berlin");
