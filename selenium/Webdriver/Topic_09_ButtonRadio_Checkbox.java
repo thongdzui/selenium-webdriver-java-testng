@@ -210,6 +210,7 @@ public class Topic_09_ButtonRadio_Checkbox {
 		
 		//Multi element
 		//List<WebElement> links = driver.findElements(By.xpath(""));
+		//Tett
 		
 	}
 	public void checkToCheckBoxOrRadioButton(By by) {
