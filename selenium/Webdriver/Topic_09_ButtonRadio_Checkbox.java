@@ -97,7 +97,7 @@ public class Topic_09_ButtonRadio_Checkbox {
 		
 		//Verify checkbox is deselected
 		//Assert.assertTrue(driver.findElement(By.xpath("//label[text()='Rear side airbags']/preceding-sibling::input")).isSelected());
-		
+		//
 		//--------------------------------------------------------------------------------------------------------------------
 		//--------------------------------------Cách dùng Checkbox hợp lí nhất -----------------------------------------
 		
