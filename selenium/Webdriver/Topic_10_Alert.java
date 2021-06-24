@@ -20,11 +20,15 @@ import org.testng.annotations.Test;
 
 public class Topic_10_Alert {
 	WebDriver driver;
+	String projectPath = System.getProperty("user.dir");
 	WebDriverWait explicitWait;
 	Alert alert;
+	
 
 	@BeforeClass
 	public void beforeClass() {
+		
+		System.setProperty("webdriver.gecko.driver", projectPath + "/browserDriver/geckodriver");
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		explicitWait = new WebDriverWait(driver, 10);
