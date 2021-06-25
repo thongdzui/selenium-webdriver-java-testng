@@ -113,6 +113,27 @@ public class Topic_11_User_Interaction_Part1 {
 		
 		
 	}
+	@Test
+	public void TC_02_Click_And_Hold_Random() {
+		driver.get("https://automationfc.github.io/jquery-selectable/");
+		List<WebElement> rectangleNumber = driver.findElements(By.cssSelector("#selectable>li"));
+		//Nhấn phím Ctrl xuống
+		action.keyDown(Keys.COMMAND).perform();
+		
+		//chọn các element đích
+		action.click(rectangleNumber.get(0));
+		action.click(rectangleNumber.get(2));
+		action.click(rectangleNumber.get(7));
+		action.click(rectangleNumber.get(8)).perform();;
+		
+		//nhả phím Ctrl ra
+		action.keyUp(Keys.COMMAND).perform();
+		sleepInSecond(3);
+		
+		Assert.assertEquals(driver.findElements(By.cssSelector("#selectable>li.ui-selected")).size(), 4);
+		
+		
+	}
 
 	@AfterClass
 	public void afterClass() {
