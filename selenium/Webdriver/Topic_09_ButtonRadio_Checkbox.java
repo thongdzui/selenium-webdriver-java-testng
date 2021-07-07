@@ -64,7 +64,7 @@ public class Topic_09_ButtonRadio_Checkbox {
 		
 		//TRICK
 		//remove attribute disabled of button Đăng nhập
-	
+		
 		jsExecutor.executeScript("arguments[0].removeAttribute('disabled')", driver.findElement(By.cssSelector(".fhs-btn-login")));
 		sleepInSecond(5);
 		
