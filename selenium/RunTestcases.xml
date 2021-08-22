@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="ThongVIp" parallel="false">
+	<groups>
+	<run>
+		<include name="web" />
+	</run>
+	</groups>
+	
+  <test name="Run on FIREFOX">
+    <!-- <classes>
+      <class name="testng.Topic_01_Annotations"/>
+      <class name="Webdriver.Topic_01_Template"/>
+    </classes> -->
+    
+    <packages>
+    	<package name="intergrationTest" />
+    	<package name="mobileTest" />
+    	<package name="webTest" />
+    </packages>
+  </test> 
+</suite> 

@@ -47,7 +47,7 @@ public class Topic_12_Popup {
 		
 	}
 
-	//@Test
+	@Test
 	public void TC_02_Random_In_DOM() {
 		driver.get("https://blog.testproject.io/");
 		sleepInSecond(50);
@@ -75,7 +75,7 @@ public class Topic_12_Popup {
 		
 	}
 
-	@Test
+	//@Test
 	public void TC_03_Random_Not_In_Dom() {
 		driver.get("https://shopee.vn/");
 		
