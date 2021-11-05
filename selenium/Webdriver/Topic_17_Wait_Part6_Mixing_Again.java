@@ -113,7 +113,7 @@ public class Topic_17_Wait_Part6_Mixing_Again {
 
 	}
 
-	// @Test
+	@Test
 	public void TC_04_Not_Found_Only_Explicit_WebElement() {
 		driver.get("https://www.facebook.com/");
 		explicitWait = new WebDriverWait(driver, 5);
