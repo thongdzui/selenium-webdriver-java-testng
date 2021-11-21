@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -24,15 +24,18 @@ public class Topic_17_Wait_PartVII_Fluent_Again {
 
 	@BeforeClass
 	public void beforeClass() {
+		System.setProperty("webdriver.chrome.driver", projectPath + "/browserDriver/chromedriver");
 
-		System.setProperty("webdriver.gecko.driver", projectPath + "/browserDriver/geckodriver");
-		driver = new FirefoxDriver();
+		driver = new ChromeDriver();
+
+		// System.setProperty("webdriver.gecko.driver", projectPath + "/browserDriver/geckodriver");
+		// driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 
 	}
 
-	// @Test
+	@Test
 	public void TC_01_() {
 		driver.get("https://automationfc.github.io/fluent-wait/");
 
